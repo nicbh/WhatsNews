@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F42056BC1EE47149009F9F47 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42056BB1EE47149009F9F47 /* SettingTableViewController.swift */; };
+		F42056BE1EE4ED4B009F9F47 /* FindPasswdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42056BD1EE4ED4B009F9F47 /* FindPasswdViewController.swift */; };
+		F42056C01EE4F6B2009F9F47 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42056BF1EE4F6B2009F9F47 /* Util.swift */; };
+		F42056C21EE4FFDE009F9F47 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42056C11EE4FFDE009F9F47 /* SignupViewController.swift */; };
+		F42056C41EE50003009F9F47 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42056C31EE50003009F9F47 /* LoginViewController.swift */; };
+		F42056C71EE500E1009F9F47 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42056C61EE500E1009F9F47 /* ContentViewController.swift */; };
+		F42056C91EE502F7009F9F47 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42056C81EE502F7009F9F47 /* NewsModel.swift */; };
+		F454D2511EF569FB008893A4 /* ResponseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454D2501EF569FB008893A4 /* ResponseViewController.swift */; };
+		F454D25E1EF67892008893A4 /* SwiftTheme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F454D25D1EF67892008893A4 /* SwiftTheme.framework */; };
+		F454D25F1EF67898008893A4 /* SwiftTheme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F454D25D1EF67892008893A4 /* SwiftTheme.framework */; };
+		F454D2601EF67898008893A4 /* SwiftTheme.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F454D25D1EF67892008893A4 /* SwiftTheme.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F454D2621EF68F35008893A4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454D2611EF68F34008893A4 /* User.swift */; };
+		F454D2641EF7D81E008893A4 /* network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454D2631EF7D81E008893A4 /* network.swift */; };
+		F454D2661EF7DFFF008893A4 /* SwiftSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F454D2651EF7DFFF008893A4 /* SwiftSocket.framework */; };
+		F454D2671EF7E8E8008893A4 /* SwiftSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F454D2651EF7DFFF008893A4 /* SwiftSocket.framework */; };
+		F454D2681EF7E8E8008893A4 /* SwiftSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F454D2651EF7DFFF008893A4 /* SwiftSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F454D26A1EF7FF51008893A4 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454D2691EF7FF51008893A4 /* ArticleTableViewCell.swift */; };
+		F454D26C1EF816AC008893A4 /* CollectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454D26B1EF816AC008893A4 /* CollectTableViewController.swift */; };
+		F454D26E1EF82755008893A4 /* CollectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454D26D1EF82755008893A4 /* CollectTableViewCell.swift */; };
 		F4D7EEC91ED1CCA700258BCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7EEC81ED1CCA700258BCA /* AppDelegate.swift */; };
 		F4D7EECB1ED1CCA700258BCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7EECA1ED1CCA700258BCA /* ViewController.swift */; };
 		F4D7EECE1ED1CCA700258BCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D7EECC1ED1CCA700258BCA /* Main.storyboard */; };
@@ -18,6 +37,9 @@
 		F4D7EEFE1ED2BC3800258BCA /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7EEFD1ED2BC3800258BCA /* NewsTableViewController.swift */; };
 		F4D7EF001ED2BC7400258BCA /* ArticleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7EEFF1ED2BC7400258BCA /* ArticleTableViewController.swift */; };
 		F4D7EF021ED2BCC400258BCA /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D7EF011ED2BCC400258BCA /* PeopleTableViewController.swift */; };
+		F4E0964A1EEE39E400D555A6 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E096491EEE39E400D555A6 /* NewsTableViewCell.swift */; };
+		F4E0964D1EEE4E5400D555A6 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E0964B1EEE4E5400D555A6 /* ImageHelper.swift */; };
+		F4E0964E1EEE4E5400D555A6 /* ImageVIewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E0964C1EEE4E5400D555A6 /* ImageVIewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +59,37 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F454D2571EF67175008893A4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F454D2601EF67898008893A4 /* SwiftTheme.framework in Embed Frameworks */,
+				F454D2681EF7E8E8008893A4 /* SwiftSocket.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F42056BB1EE47149009F9F47 /* SettingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		F42056BD1EE4ED4B009F9F47 /* FindPasswdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPasswdViewController.swift; sourceTree = "<group>"; };
+		F42056BF1EE4F6B2009F9F47 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		F42056C11EE4FFDE009F9F47 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		F42056C31EE50003009F9F47 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F42056C61EE500E1009F9F47 /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		F42056C81EE502F7009F9F47 /* NewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		F454D2501EF569FB008893A4 /* ResponseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseViewController.swift; sourceTree = "<group>"; };
+		F454D25D1EF67892008893A4 /* SwiftTheme.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftTheme.framework; sourceTree = "<group>"; };
+		F454D2611EF68F34008893A4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F454D2631EF7D81E008893A4 /* network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = network.swift; sourceTree = "<group>"; };
+		F454D2651EF7DFFF008893A4 /* SwiftSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftSocket.framework; sourceTree = "<group>"; };
+		F454D2691EF7FF51008893A4 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
+		F454D26B1EF816AC008893A4 /* CollectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectTableViewController.swift; sourceTree = "<group>"; };
+		F454D26D1EF82755008893A4 /* CollectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectTableViewCell.swift; sourceTree = "<group>"; };
 		F4D7EEC51ED1CCA700258BCA /* WhatsNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D7EEC81ED1CCA700258BCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4D7EECA1ED1CCA700258BCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +107,9 @@
 		F4D7EEFD1ED2BC3800258BCA /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		F4D7EEFF1ED2BC7400258BCA /* ArticleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewController.swift; sourceTree = "<group>"; };
 		F4D7EF011ED2BCC400258BCA /* PeopleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
+		F4E096491EEE39E400D555A6 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		F4E0964B1EEE4E5400D555A6 /* ImageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		F4E0964C1EEE4E5400D555A6 /* ImageVIewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageVIewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +117,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F454D25F1EF67898008893A4 /* SwiftTheme.framework in Frameworks */,
+				F454D25E1EF67892008893A4 /* SwiftTheme.framework in Frameworks */,
+				F454D2661EF7DFFF008893A4 /* SwiftSocket.framework in Frameworks */,
+				F454D2671EF7E8E8008893A4 /* SwiftSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,9 +141,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F42056C51EE5001F009F9F47 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				F42056BB1EE47149009F9F47 /* SettingTableViewController.swift */,
+				F42056C31EE50003009F9F47 /* LoginViewController.swift */,
+				F42056C11EE4FFDE009F9F47 /* SignupViewController.swift */,
+				F42056BD1EE4ED4B009F9F47 /* FindPasswdViewController.swift */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
 		F4D7EEBC1ED1CCA700258BCA = {
 			isa = PBXGroup;
 			children = (
+				F454D2651EF7DFFF008893A4 /* SwiftSocket.framework */,
+				F454D25D1EF67892008893A4 /* SwiftTheme.framework */,
 				F4D7EEC71ED1CCA700258BCA /* WhatsNews */,
 				F4D7EEDC1ED1CCA700258BCA /* WhatsNewsTests */,
 				F4D7EEE71ED1CCA700258BCA /* WhatsNewsUITests */,
@@ -107,10 +179,22 @@
 			children = (
 				F4D7EEFA1ED2BA5900258BCA /* Supporting Files */,
 				F4D7EECA1ED1CCA700258BCA /* ViewController.swift */,
+				F4E0964F1EEE4EEA00D555A6 /* ImageHelper */,
 				F4D7EECC1ED1CCA700258BCA /* Main.storyboard */,
+				F454D26B1EF816AC008893A4 /* CollectTableViewController.swift */,
+				F454D26D1EF82755008893A4 /* CollectTableViewCell.swift */,
+				F42056C61EE500E1009F9F47 /* ContentViewController.swift */,
+				F42056C51EE5001F009F9F47 /* User */,
+				F42056BF1EE4F6B2009F9F47 /* Util.swift */,
 				F4D7EEFF1ED2BC7400258BCA /* ArticleTableViewController.swift */,
 				F4D7EF011ED2BCC400258BCA /* PeopleTableViewController.swift */,
 				F4D7EEFD1ED2BC3800258BCA /* NewsTableViewController.swift */,
+				F454D2501EF569FB008893A4 /* ResponseViewController.swift */,
+				F4E096491EEE39E400D555A6 /* NewsTableViewCell.swift */,
+				F454D2691EF7FF51008893A4 /* ArticleTableViewCell.swift */,
+				F42056C81EE502F7009F9F47 /* NewsModel.swift */,
+				F454D2611EF68F34008893A4 /* User.swift */,
+				F454D2631EF7D81E008893A4 /* network.swift */,
 				F4D7EEFB1ED2BAAC00258BCA /* UserTableViewController.swift */,
 			);
 			path = WhatsNews;
@@ -145,6 +229,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F4E0964F1EEE4EEA00D555A6 /* ImageHelper */ = {
+			isa = PBXGroup;
+			children = (
+				F4E0964B1EEE4E5400D555A6 /* ImageHelper.swift */,
+				F4E0964C1EEE4E5400D555A6 /* ImageVIewExtension.swift */,
+			);
+			name = ImageHelper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,6 +248,7 @@
 				F4D7EEC11ED1CCA700258BCA /* Sources */,
 				F4D7EEC21ED1CCA700258BCA /* Frameworks */,
 				F4D7EEC31ED1CCA700258BCA /* Resources */,
+				F454D2571EF67175008893A4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -279,12 +373,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F454D26A1EF7FF51008893A4 /* ArticleTableViewCell.swift in Sources */,
+				F454D2511EF569FB008893A4 /* ResponseViewController.swift in Sources */,
+				F454D26E1EF82755008893A4 /* CollectTableViewCell.swift in Sources */,
+				F42056BC1EE47149009F9F47 /* SettingTableViewController.swift in Sources */,
+				F42056C01EE4F6B2009F9F47 /* Util.swift in Sources */,
+				F454D2641EF7D81E008893A4 /* network.swift in Sources */,
+				F42056C21EE4FFDE009F9F47 /* SignupViewController.swift in Sources */,
 				F4D7EF001ED2BC7400258BCA /* ArticleTableViewController.swift in Sources */,
+				F42056C71EE500E1009F9F47 /* ContentViewController.swift in Sources */,
 				F4D7EEFE1ED2BC3800258BCA /* NewsTableViewController.swift in Sources */,
+				F42056BE1EE4ED4B009F9F47 /* FindPasswdViewController.swift in Sources */,
 				F4D7EECB1ED1CCA700258BCA /* ViewController.swift in Sources */,
+				F4E0964A1EEE39E400D555A6 /* NewsTableViewCell.swift in Sources */,
 				F4D7EEFC1ED2BAAC00258BCA /* UserTableViewController.swift in Sources */,
+				F42056C91EE502F7009F9F47 /* NewsModel.swift in Sources */,
+				F4E0964D1EEE4E5400D555A6 /* ImageHelper.swift in Sources */,
 				F4D7EF021ED2BCC400258BCA /* PeopleTableViewController.swift in Sources */,
+				F454D2621EF68F35008893A4 /* User.swift in Sources */,
+				F454D26C1EF816AC008893A4 /* CollectTableViewController.swift in Sources */,
 				F4D7EEC91ED1CCA700258BCA /* AppDelegate.swift in Sources */,
+				F4E0964E1EEE4E5400D555A6 /* ImageVIewExtension.swift in Sources */,
+				F42056C41EE50003009F9F47 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +546,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NightNight",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = WhatsNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NJU.nicbh.WhatsNews;
@@ -448,6 +563,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NightNight",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = WhatsNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NJU.nicbh.WhatsNews;
@@ -529,6 +649,7 @@
 				F4D7EEEF1ED1CCA700258BCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F4D7EEF01ED1CCA700258BCA /* Build configuration list for PBXNativeTarget "WhatsNewsTests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +658,7 @@
 				F4D7EEF21ED1CCA700258BCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F4D7EEF31ED1CCA700258BCA /* Build configuration list for PBXNativeTarget "WhatsNewsUITests" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +667,7 @@
 				F4D7EEF51ED1CCA700258BCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

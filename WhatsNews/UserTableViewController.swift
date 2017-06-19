@@ -17,6 +17,30 @@ class UserTableViewController: UITableViewController {
         static let title4 = "我的"
         static let settingTitle = "设置"
         static let settingSegue = "Setting"
+        static let userImage = "UserImage"
+        static let collectSegue = "Show Collection"
+    }
+    
+    @IBOutlet weak var nightModeSwitch: UISwitch!
+    
+    @IBAction func nightModeSwitch(_ sender: UISwitch) {
+        // TODO:
+        let alert = UIAlertController(title: "尚未实现该功能", message: "", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "好的", style: .default, handler: { [weak weakSelf = self] action in
+            switch action.style{
+            case .default:
+                DispatchQueue.main.async() { [weak weakSelf = weakSelf] in
+                    weakSelf?.nightModeSwitch.setOn(false, animated: true)
+                }
+                
+            case .cancel:
+                print("cancel")
+                
+            case .destructive:
+                print("destructive")
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     private var settingButton: UIBarButtonItem = UIBarButtonItem()
@@ -27,11 +51,20 @@ class UserTableViewController: UITableViewController {
         }
     }
     
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var userImage: UIImageView!
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.tabBarController?.navigationItem.title = StoryBoard.title4
         self.tabBarController?.navigationItem.setRightBarButton(settingButton, animated: animated)
+        let delegate = (UIApplication.shared.delegate) as! AppDelegate
+        if delegate.user != nil, userImage?.image == nil {
+            usernameLabel!.text = delegate.user!.username
+            tableView?.cellForRow(at: IndexPath(row: 0, section: 0))?.isUserInteractionEnabled = false
+            userImage?.image = UIImage(named: StoryBoard.userImage)
+        }
     }
     
     override func viewDidLoad() {
@@ -45,12 +78,56 @@ class UserTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-    //
-    //    override func didReceiveMemoryWarning() {
-    //        super.didReceiveMemoryWarning()
-    //        // Dispose of any resources that can be recreated.
-    //    }
-    //
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if (indexPath.section == 1 && indexPath.row == 0) || indexPath.section == 2 {
+            let alert = UIAlertController(title: "尚未实现该功能", message: "", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "好的", style: .default, handler: { [weak weakSelf = self] action in
+                switch action.style{
+                case .default:
+                    DispatchQueue.main.async() { [weak weakSelf = weakSelf] in
+                        weakSelf?.tableView!.deselectRow(at: indexPath, animated: true)
+                    }
+                    
+                case .cancel:
+                    print("cancel")
+                    
+                case .destructive:
+                    print("destructive")
+                }
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+        else if indexPath.section == 1 && indexPath.row == 1 {
+            if let _ = ((UIApplication.shared.delegate) as? AppDelegate)?.user {
+                self.tableView!.deselectRow(at: indexPath, animated: true)
+                self.performSegue(withIdentifier: StoryBoard.collectSegue, sender: nil)
+                
+            }
+            else {
+                let alert = UIAlertController(title: "请先登录", message: "", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "好的", style: .default, handler: { action in
+                    switch action.style{
+                    case .default:
+                        break
+                        
+                    case .cancel:
+                        print("cancel")
+                        
+                    case .destructive:
+                        print("destructive")
+                    }
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
+    
     //    // MARK: - Table view data source
     //
     //    override func numberOfSections(in tableView: UITableView) -> Int {

@@ -17,6 +17,8 @@ class NewsTableViewController: UITableViewController {
         static let title4 = "我的"
         static let searchTitle = "搜索"
         static let searchSegue = "SearchNews"
+        static let newsItemCell = "News Item"
+        static let showNews = "ShowNews"
     }
     
     private var searchButton: UIBarButtonItem = UIBarButtonItem()
@@ -32,57 +34,85 @@ class NewsTableViewController: UITableViewController {
         
         self.tabBarController?.navigationItem.title = StoryBoard.title1
         self.tabBarController?.navigationItem.setRightBarButton(searchButton, animated: animated)
+        
+    }
+    
+    private func refreshModel() {
+        news.removeAll()
+        newsModel.fetchNews{ [weak weakSelf = self] newItem in
+            DispatchQueue.main.async {
+                weakSelf?.news.insert(newItem, at: 0)
+            }
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        searchButton = UIBarButtonItem.init(title: StoryBoard.searchTitle, style: .plain, target: self, action: #selector(searchButtonClicked(sender:)))
+        tableView.estimatedRowHeight = tableView.rowHeight
+        tableView.rowHeight = UITableViewAutomaticDimension
         
+        searchButton = UIBarButtonItem.init(title: StoryBoard.searchTitle, style: .plain, target: self, action: #selector(searchButtonClicked(sender:)))
+        refreshModel()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-    //
-    //    override func didReceiveMemoryWarning() {
-    //        super.didReceiveMemoryWarning()
-    //        // Dispose of any resources that can be recreated.
-    //    }
-    //
-    //    // MARK: - Table view data source
-    //
-    //    override func numberOfSections(in tableView: UITableView) -> Int {
-    //        // #warning Incomplete implementation, return the number of sections
-    //        return 0
-    //    }
-    //
-    //    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    //        // #warning Incomplete implementation, return the number of rows
-    //        return 0
-    //    }
     
-
+    var newsModel: News = News()
+    
+    var news: [Array<NewsItem>] = [] {
+        didSet {
+            tableView?.reloadData()
+        }
+    }
+    
+    // MARK: - Table view data source
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return news.count
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return news[section].count
+    }
+    
     /*
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let shareAction = UITableViewRowAction(style: UITableViewRowActionStyle.normal, title: "收藏" , handler: { [weak weakSelf = self] (action:UITableViewRowAction, indexPath:IndexPath) -> Void in
+            print(111111)
+            weakSelf?.setEditing(false, animated: true)
+        })
+        return [shareAction]
+    }*/
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: StoryBoard.newsItemCell, for: indexPath)
+        
         // Configure the cell...
-
+        let newsitem = news[indexPath.section][indexPath.row]
+        if let newscell = cell as? NewsTableViewCell {
+            newscell.news = newsitem
+        }
+        
         return cell
     }
-    */
-
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
+        // TODO
         return true
     }
-    */
-
-    /*
+    
+    
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -90,33 +120,50 @@ class NewsTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
+        }
+    }*/
+    
+    
     /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
+     // Override to support rearranging the table view.
+     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+     
+     }
+     */
+    
     /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+     // Override to support conditional rearranging of the table view.
+     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+     // Return false if you do not want the item to be re-orderable.
+     return true
+     }
+     */
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView!.deselectRow(at: indexPath, animated: true)
+        let item = newsModel.getDetail(section: indexPath.section, row: indexPath.row)
+        
+        self.performSegue(withIdentifier: StoryBoard.showNews, sender: item)
     }
-    */
-
-    /*
+    
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == StoryBoard.showNews {
+            let controller = segue.destination as! ContentViewController
+            controller.news = sender as? NewsDetail
+        }
     }
-    */
-
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
 }
